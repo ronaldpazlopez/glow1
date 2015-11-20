@@ -4,8 +4,8 @@
     xmlns:android   = "http://schemas.android.com/apk/res/android"
     id              = "com.quizneutrogena.app"
     version         = "1.0.0">
-<name>QuizNeutrogena 2015 App</name>
-<description>Aplicacion de la marca Neutrogena actualizada en Noviembre del 2015</description>
+<name>QuizGlow App</name>
+<description>Aplicacion de la marca Glow actualizada en Noviembre del 2015</description>
 
 <icon src="img/ic_launcher96x96.png" />
 <icon src="img/ic_launcher48x48.png"   gap:platform="android"    gap:qualifier="ldpi" />
