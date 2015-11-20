@@ -1,0 +1,337 @@
+<html>
+<head>
+	<title>
+    Neutrogena
+  </title>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css" />
+	<link rel="stylesheet" href="css/estilos.css" />
+	
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery.mobile-1.4.2.min.js"></script>
+</head>
+ 
+<body>
+
+<script type="text/javascript">
+	/*
+    var idResultado;
+	var cadVariables = location.search.substring(1,location.search.length);
+	var arrVariables = cadVariables.split("&");	
+	for (i=0; i<arrVariables.length; i++) {
+	  arrVariableActual = arrVariables[i].split("=");
+	  if (isNaN(parseFloat(arrVariableActual[1]))){
+		eval(arrVariableActual[0]+"='"+unescape(arrVariableActual[1])+"';");
+	  }else{
+		eval(arrVariableActual[0]+"="+arrVariableActual[1]+";");
+	  }
+	  idResultado=arrVariableActual[1];
+
+	}    
+	
+	irResultado();
+	*/
+	 
+	function ctrOpciones(prefix_url){
+		var request_params = _getUrlVars();
+		
+		if(request_params.length >0){
+			location.href="#" + prefix_url +  "?id_r=" + request_params["id_r"] + "&r=" + request_params["r"];
+		}else{
+			//location.href= "index.html#opciones";
+			location.href="#" + prefix_url;
+		}
+	}
+	
+	function irResultado(){
+		var request_params = _getUrlVars();
+		
+		if(request_params.length >0){
+			location.href = "#resultado_0" + request_params["r"] + "?id_r=" + request_params["id_r"] + "&r=" + request_params["r"];
+		}else{
+			location.href= "index.html#opciones";
+		}
+		
+	}
+	
+	function irHome(){
+		var request_params = _getUrlVars();
+		
+		if(request_params.length >0){
+			location.href= "index.html";
+		}else{
+			location.href= "index.html#opciones";
+		}
+	}
+		
+ </script> 
+
+
+  
+<!--  -->
+<!--  -->
+<!-- Start page -->
+<div data-role="page" data-theme="f" id="resultado_01" class="degradado">
+  <div data-role="header" data-theme="g">
+    <h1 class="ui-header-g">
+    	<img src="img/titulo_normal.png" alt="">
+         <a href="#" class=" ui-icon-delete ui-li-icon ui-btn-right" onclick="irHome(); return false;"><img src="img/btncerrar.png" class="" alt="close"></a>        
+    </h1>    
+  </div>
+  
+  <div data-role="content" data-theme="f">    
+	<div class="ui-grid-c" style="">
+            <div class="ui-block-c" style="">
+            	<img src="img/frasconormal_1.png" alt="">
+            </div>
+			 <div class="ui-block-c" style="">
+            	<img src="img/frasconormal_2.png" alt="">
+            </div>
+            
+             <div class="ui-block-c" style="">
+            	<img src="img/frasconormal_3.png" alt="">
+            </div>
+            
+             <div class="ui-block-c" style="">
+            	<img src="img/frasconormal_4.png" alt="">
+            </div>          
+	  </div>  
+  <!-- <a href="#" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn-righ"   Onclick="ctrOpciones('pregunta_b2');><img src="img/btncatalogo.png"></a>	 -->
+  
+   <a href="#"  data-inline="true" class="ui-btn-righ" Onclick="ctrOpciones('catalogo_01');">
+   	 <img src="img/btncatalogo.png">
+    </a>
+  
+  
+    
+  
+  </div>
+</div> 
+<!-- End page -->
+<!--  -->
+<!--  -->
+
+
+
+
+
+<!--  -->
+<!-- Start page -->
+   <!--  -->
+    <!-- Start pop up -->
+   <div data-role="page" data-theme="f" id="catalogo_01" class="degradado">
+    
+	      <div data-role="header" data-theme="g">
+           <h1 class="ui-header-g">
+          		<img src="img/titulo_catalogo.png" alt="">
+	            <a href="#" class="ui-btn ui-corner-all ui-icon-delete ui-li-icon ui-btn-right" Onclick="irResultado();"><img src="img/btncerrar.png" class="" alt="close"></a>
+            </h1>       
+    	  </div>
+          
+	      <div data-role="main" class="ui-content">
+		      <div class="ui-grid-a" style="">
+              
+            <div class="ui-block-a" style="font-size:13px; padding-top:50px; padding-left:0px">
+	            <div class="cont-catalogo" >
+                    <h2><strong>Todo tipo de piel</strong></h2>            	
+                       <strong>Protector Solar: </strong>
+                       <p>Prótegete de los efectos nocivos de los rayos solares </p>
+                      <p> con la más avanzadas tecnología Helioplex ( amplio  </p>
+                      <p> espectro de larga duración UVA/UVB).  </p>
+                       <a href="#"  data-inline="true" class="" Onclick="ctrOpciones('catalogo_02');">
+						   	 <img src="img/btn_siguiente.png">
+					    </a>
+                 </div>
+	         </div>
+             
+			 <div class="ui-block-b" style="">
+            	<img src="img/catalogo_f1.png" alt="">
+            </div>
+	  </div>
+		  </div>
+                    
+	</div>
+    <!-- End pop up -->
+    <!--  -->
+    <!--  -->
+    
+    
+    <!--  -->
+<!-- Start page -->
+   <!--  -->
+    <!-- Start pop up -->
+   <div data-role="page" data-theme="f" id="catalogo_02" class="degradado">
+    
+	      <div data-role="header" data-theme="g">
+           <h1 class="ui-header-g">
+          		<img src="img/titulo_catalogo.png" alt="">
+	            <a href="#" class="ui-btn ui-corner-all ui-icon-delete ui-li-icon ui-btn-right" Onclick="irResultado();"><img src="img/btncerrar.png" class="" alt="close"></a>
+            </h1>       
+    	  </div>
+          
+	      <div data-role="main" class="ui-content">
+		      <div class="ui-grid-a" style="">
+              
+            <div class="ui-block-a" style="font-size:13px; padding-top:50px;">
+	            <div class="cont-catalogo" >
+                    <h2><strong>Todo tipo de piel</strong></h2>            	
+                       <strong>Desmaquillantes:</strong>
+                       <p>Recuerda desmaquillarte cuando termine </p>
+                      <p>tu día o cada vez que quieras iniciar tu rutina de </p>
+                      <p>limpieza, tonoficación y humectación. </p>
+                       <a href="#"  data-inline="true" class="" Onclick="ctrOpciones('catalogo_01');">
+						   	 <img src="img/btn_regresar.png">
+					    </a>
+                 </div>
+	         </div>
+             
+			 <div class="ui-block-b" style="">
+            	<img src="img/catalogo_f2.png" alt="">
+            </div>
+	  </div>
+      
+    
+		  </div>
+          
+          
+                    
+	</div>
+    <!-- End pop up -->
+    <!--  -->
+    <!--  -->
+    
+    
+    
+    
+    <!--  -->
+<!-- Start page -->
+<div data-role="page" data-theme="f" id="resultado_02" class="degradado">
+  <div data-role="header" data-theme="g">
+    <h1 class="ui-header-g">
+    	<img src="img/titulo_mixta.png" alt="">
+         <a href="index.html" class=" ui-icon-delete ui-li-icon ui-btn-right"  rel="external" ><img src="img/btncerrar.png" class="" alt="close"></a>        
+    </h1>    
+  </div>
+  
+  <div data-role="content" data-theme="f">    
+	<div class="ui-grid-c" style="">
+            <div class="ui-block-c" style="">
+            	<img src="img/frascomixta_1.png" alt="">
+            </div>
+			 <div class="ui-block-c" style="">
+            	<img src="img/frascomixta_2.png" alt="">
+            </div>
+            
+             <div class="ui-block-c" style="">
+            	<img src="img/frascomixta_3.png" alt="">
+            </div>
+            
+             <div class="ui-block-c" style="">
+            	<img src="img/frascomixta_4.png" alt="">
+            </div>          
+	  </div>  
+  <!-- <a href="#" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn-righ"   Onclick="ctrOpciones('pregunta_b2');><img src="img/btncatalogo.png"></a>	 -->
+  
+   <a href="#"  data-inline="true" class="ui-btn-righ" Onclick="ctrOpciones('catalogo_01');">
+   	 <img src="img/btncatalogo.png">
+    </a>
+  
+  
+    
+  
+  </div>
+</div> 
+<!-- End page -->
+
+
+
+<!-- Start page -->
+<div data-role="page" data-theme="f" id="resultado_03" class="degradado">
+  <div data-role="header" data-theme="g">
+    <h1 class="ui-header-g">
+    	<img src="img/titulo_grasa.png" alt="">
+         <a href="#" class=" ui-icon-delete ui-li-icon ui-btn-right" onclick="irHome(); return false;"><img src="img/btncerrar.png" class="" alt="close"></a>        
+    </h1>    
+  </div>
+  
+  <div data-role="content" data-theme="f">    
+	<div class="ui-grid-c" style="">
+            <div class="ui-block-c" style="">
+            	<img src="img/frascomixta_1.png" alt="">
+            </div>
+			 <div class="ui-block-c" style="">
+            	<img src="img/frascomixta_2.png" alt="">
+            </div>
+            
+             <div class="ui-block-c" style="">
+            	<img src="img/frascomixta_3.png" alt="">
+            </div>
+            
+             <div class="ui-block-c" style="">
+            	<img src="img/frascomixta_4.png" alt="">
+            </div>          
+	  </div>  
+  <!-- <a href="#" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn-righ"   Onclick="ctrOpciones('pregunta_b2');><img src="img/btncatalogo.png"></a>	 -->
+  
+   <a href="#"  data-inline="true" class="ui-btn-righ" Onclick="ctrOpciones('catalogo_01');">
+   	 <img src="img/btncatalogo.png">
+    </a>
+  
+  
+    
+  
+  </div>
+</div> 
+<!-- End page -->
+
+
+
+
+
+
+<!-- Start page -->
+<div data-role="page" data-theme="f" id="resultado_04" class="degradado">
+  <div data-role="header" data-theme="g">
+    <h1 class="ui-header-g">
+    	<img src="img/titulo_granito.png" alt="">
+         <a href="index.html" class=" ui-icon-delete ui-li-icon ui-btn-right"  rel="external" ><img src="img/btncerrar.png" class="" alt="close"></a>        
+    </h1>    
+  </div>
+  
+  <div data-role="content" data-theme="f">    
+	<div class="ui-grid-b" style="">
+            
+			 <div class="ui-block-c" style="">
+            	<img src="img/frascogranito_2.png" alt="">
+            </div>
+            
+             <div class="ui-block-c" style="">
+            	<img src="img/frascogranito_3.png" alt="">
+            </div>
+            
+             <div class="ui-block-c" style="">
+            	<img src="img/frascogranito_4.png" alt="">
+            </div>  
+            
+       
+                 
+	  </div>  
+  <!-- <a href="#" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn-righ"   Onclick="ctrOpciones('pregunta_b2');><img src="img/btncatalogo.png"></a>	 -->
+  
+   <a href="#"  data-inline="true" class="ui-btn-righ" Onclick="ctrOpciones('catalogo_01');">
+   	 <img src="img/btncatalogo.png">
+    </a>
+  
+  
+    
+  
+  </div>
+</div> 
+<!-- End page -->
+
+
+<script src="js/model.js"></script>
+</body>
+</html>

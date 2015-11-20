@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns       = "http://www.w3.org/ns/widgets"
+    xmlns:gap       = "http://phonegap.com/ns/1.0"
+    xmlns:android   = "http://schemas.android.com/apk/res/android"
+    id              = "com.quizneutrogena.app"
+    version         = "1.0.0">
+<name>QuizNeutrogena 2015 App</name>
+<description>Aplicacion de la marca Neutrogena actualizada en Noviembre del 2015</description>
+
+<icon src="img/ic_launcher96x96.png" />
+<icon src="img/ic_launcher48x48.png"   gap:platform="android"    gap:qualifier="ldpi" />
+<icon src="img/ic_launcher48x48.png"   gap:platform="android"    gap:qualifier="mdpi" />
+<icon src="img/ic_launcher72x72.png"   gap:platform="android"    gap:qualifier="hdpi" />
+<icon src="img/ic_launcher96x96.png"  gap:platform="android"    gap:qualifier="xhdpi" />
+
+<access origin="*" subdomains="false"  />
+<gap:platform name="android" />
+<feature name="http://api.phonegap.com/1.0/network"/>
+<feature name="http://api.phonegap.com/1.0/device"/>
+
+<gap:plugin name="cordova-plugin-whitelist" source="npm" />
+<gap:plugin name="org.apache.cordova.device" />
+
+</widget>

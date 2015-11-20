@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Neutrogena Login</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="../css/jquery.mobile-1.4.2.min.css">
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script src="../js/jquery.mobile-1.4.2.min.js"></script>
+</head>
+ 
+<body>
+<div data-role="page">
+	<div data-role="header"><!-- Inicia el Cabecera -->
+		<h1>Administrador</h1>
+	</div><!-- Termina el Cabecera -->
+
+	<div data-role="content"><!-- Inicia el Contenido-->
+			
+			<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+			<input class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset" name="tbUsuario" id="tbUsuario" value="" placeholder="Usuario:" type="text">
+			</div>
+			<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+			<input class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset" name="tbContrasena" id="tbContrasena" value="" placeholder="Contrase&ntilde;a:" type="password">
+			</div>
+			
+	</div>
+	
+	<div data-role="footer"><!-- Inicia el Pie -->
+		<a aria-disabled="false" onclick="ctrlLogin()" >Ingresar</a>
+		<a aria-disabled="false" href="../index.html" rel="external">Regresar</a>
+	</div><!-- Termina el Pie -->
+	
+</div><!-- /page -->
+
+<script src="../js/model.js"></script>
+</body>
+</html>

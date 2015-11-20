@@ -1,0 +1,374 @@
+<html>
+<head>
+  <title>
+    Neutrogena
+  </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css" />
+  <link rel="stylesheet" href="css/estilos.css" />
+  
+  <script src="js/jquery-1.9.1.min.js"></script>
+  <script src="js/jquery.mobile-1.4.2.min.js"></script>
+</head>
+ 
+<body>
+
+<!--  -->
+<!--  -->
+<!-- Start page -->
+
+  
+<script type="text/javascript">
+	var arr_values = [];	
+	function ctrOpciones(prefix_url,prefix){	
+		if ( $('input[name="' + prefix + '"]:checked').length > 0){		
+			var _str_value = $('input[name="' + prefix + '"]:checked').val();
+			arr_values.push(_str_value);		
+			
+			if( prefix_url=='listo'){
+				
+				insertRecordQuiz();
+			}else{			
+				location.href="#" + prefix_url;
+			}
+			
+		}else{
+			alert("Elija alguna opci\xF3n.");
+		}		
+		return false;
+	}
+	
+	/*
+	function ctrlResultado(){	
+		alert(arr_values.join());		
+		return false;
+	}*/
+	
+  </script> <!-- End page -->
+<!--  -->
+<!--  -->
+
+<!--  -->
+<!--  -->
+<!-- Start page -->
+<div data-role="page" data-theme="f" id="pregunta_b1">
+  <div data-role="header" data-theme="g">
+    <h1 class="ui-header-g">
+    	<img src="img/cabecera2.jpg" alt="">
+    </h1>
+  </div>
+
+  <!--  -->
+  <!--  -->
+
+  <!--  -->
+  <!--  -->
+  <div data-role="content" data-theme="f">
+    
+    <div>
+      <div class="ui-title-question">
+        1.&#191;En qu&eacute; parte de tu cara la piel se ve brillante?
+      </div>
+      <div data-role="fieldcontain" class="ui-fieldcontent">
+          <fieldset data-role="">
+                <input type="radio" name="radio-choice-2" id="radio-choice-1" value="1" style="display:none"/>
+                <label for="radio-choice-1">a) En ninguna parte.</label>
+
+                <input type="radio" name="radio-choice-2" id="radio-choice-2" value="2" style="display:none" />
+                <label for="radio-choice-2">b) Solamente en la zona T (frente, nariz y ment&oacute;n).</label>
+
+                <input type="radio" name="radio-choice-2" id="radio-choice-3" value="3" style="display:none" />
+                <label for="radio-choice-3">c) En toda la cara.</label>
+                
+                <input type="radio" name="radio-choice-2" id="radio-choice-4" value="4" style="display:none" />
+                <label for="radio-choice-4">d) En toda la cara, con presencia de granitos y espinillas.</label>
+          </fieldset>
+      </div>
+    </div>
+    
+    <a href="#" data-role="button" data-inline="true" class="difference-button" Onclick="ctrOpciones('pregunta_b2','radio-choice-2');">
+      CONTINUAR
+      <img src="img/arrow.png" alt="USA" class="ui-li-icon">
+    </a>
+  </div>
+ <!-- 
+  <div data-role="footer" data-theme="g">
+    <a href="#myPopupDialog10" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn ui-corner-all ui-btn-inline">T&eacute;rminos y condiciones</a>
+  </div>-->
+</div>
+<!-- End page -->
+<!--  -->
+<!--  -->
+
+<!--  -->
+<!--  -->
+<!-- Start page -->
+<div data-role="page" data-theme="f" id="pregunta_b2">
+   <div data-role="header" data-theme="g">
+    <h1 class="ui-header-g">
+    	<img src="img/cabecera2.jpg" alt="">
+    </h1>
+  </div>
+
+  <!--  -->
+  <!--  -->
+
+  <!--  -->
+  <!--  -->
+  <div data-role="content" data-theme="f">
+  
+    <div>
+      <div class="ui-title-question">
+        2.&#191;Con qu&eacute; frecuencia en el d&iacute;a tu cara se ve brillante?
+      </div>
+      <div data-role="fieldcontain" class="ui-fieldcontent">
+          <fieldset data-role="">
+                <input type="radio" name="radio-choice-3" id="radio-choice-1" value="1" style="display:none"/>
+                <label for="radio-choice-1">a) En ning&uacute;n momento.</label>
+
+                <input type="radio" name="radio-choice-3" id="radio-choice-2" value="2" style="display:none" />
+                <label for="radio-choice-2">b) Espor&aacute;dicamente.</label>
+
+                <input type="radio" name="radio-choice-3" id="radio-choice-3" value="3" style="display:none" />
+                <label for="radio-choice-3">c) En todos los momentos del d&iacute;a.</label>
+                
+                <input type="radio" name="radio-choice-3" id="radio-choice-4" value="4" style="display:none" />
+                <label for="radio-choice-4">d) En todos los momentos del d&iacute;a, con presencia de granitos y espinillas.</label>
+          </fieldset>
+      </div>
+    </div>
+    <a href="#" data-role="button" data-inline="true" class="difference-button" Onclick="ctrOpciones('pregunta_b3','radio-choice-3');">
+      CONTINUAR
+      <img src="img/arrow.png" alt="USA" class="ui-li-icon">
+    </a>
+  </div>
+ <!-- 
+  <div data-role="footer" data-theme="g">
+    <a href="#myPopupDialog9" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn ui-corner-all ui-btn-inline">T&eacute;rminos y condiciones</a>
+  </div>-->
+</div>
+<!-- End page -->
+<!--  -->
+<!--  -->
+
+
+<!--  -->
+<!--  -->
+<!-- Start page -->
+<div data-role="page" data-theme="f" id="pregunta_b3">
+   <div data-role="header" data-theme="g">
+    <h1 class="ui-header-g">
+    	<img src="img/cabecera2.jpg" alt="">
+    </h1>
+  </div>
+
+  <!--  -->
+  <!--  -->
+
+  <!--  -->
+  <!--  -->
+  <div data-role="content" data-theme="f">
+   
+    <div>
+      <div class="ui-title-question">
+        3.&#191;Con qu&eacute; frecuencia te salen granitos y espinillas?
+      </div>
+      <div data-role="fieldcontain" class="ui-fieldcontent">
+          <fieldset data-role="">
+                <input type="radio" name="radio-choice-4" id="radio-choice-1" value="1" style="display:none"/>
+                <label for="radio-choice-1">a) Raramente.</label>
+
+                <input type="radio" name="radio-choice-4" id="radio-choice-2" value="2" style="display:none" />
+                <label for="radio-choice-2">b) Ocasionalmente, solamente en la Zona T ( frente, nariz y ment&oacute;n).</label>
+
+                <input type="radio" name="radio-choice-4" id="radio-choice-3" value="3" style="display:none" />
+                <label for="radio-choice-3">c) Ocasionalmente, en toda la cara.</label>
+                
+                <input type="radio" name="radio-choice-4" id="radio-choice-4" value="4" style="display:none" />
+                <label for="radio-choice-4">d) Siempre.</label>
+          </fieldset>
+      </div>
+    </div>
+    <a href="#" data-role="button" data-inline="true" class="difference-button" Onclick="ctrOpciones('pregunta_b4','radio-choice-4');">
+      CONTINUAR
+      <img src="img/arrow.png" alt="USA" class="ui-li-icon">
+    </a>
+  </div>
+ <!-- 
+  <div data-role="footer" data-theme="g">
+    <a href="#myPopupDialog8" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn ui-corner-all ui-btn-inline">T&eacute;rminos y condiciones</a>
+  </div>-->
+</div>
+<!-- End page -->
+<!--  -->
+<!--  -->
+
+<!--  -->
+<!--  -->
+<!-- Start page -->
+<div data-role="page" data-theme="f" id="pregunta_b4">
+    <div data-role="header" data-theme="g">
+    <h1 class="ui-header-g">
+    	<img src="img/cabecera2.jpg" alt="">
+    </h1>
+  </div>
+
+  <!--  -->
+  <!--  -->
+
+  <!--  -->
+  <!--  -->
+  <div data-role="content" data-theme="f">
+ 
+    <div>
+      <div class="ui-title-question">
+        4. &#191;C&oacute;mo se siente tu piel al tacto?
+      </div>
+      <div data-role="fieldcontain" class="ui-fieldcontent">
+          <fieldset data-role="">
+                <input type="radio" name="radio-choice-5" id="radio-choice-1" value="1" style="display:none"/>
+                <label for="radio-choice-1">a) No se siente grasosa.</label>
+
+                <input type="radio" name="radio-choice-5" id="radio-choice-2" value="2" style="display:none" />
+                <label for="radio-choice-2">b) Grasosa en la Zona T ( frente, nariz y ment&oacute;n).</label>
+
+                <input type="radio" name="radio-choice-5" id="radio-choice-3" value="3" style="display:none" />
+                <label for="radio-choice-3">c) Grasosa, en toda la cara.</label>
+                
+                <input type="radio" name="radio-choice-5" id="radio-choice-4" value="4" style="display:none" />
+                <label for="radio-choice-4">d) Grasosa, con granitos y espinillas.</label>
+          </fieldset>
+      </div>
+  
+    </div>
+    <a href="#" data-role="button" data-inline="true" class="difference-button" Onclick="ctrOpciones('pregunta_b5','radio-choice-5');">
+      CONTINUAR
+      <img src="img/arrow.png" alt="USA" class="ui-li-icon">
+    </a>
+  </div>
+ <!-- 
+  <div data-role="footer" data-theme="g">
+    <a href="#myPopupDialog7" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn ui-corner-all ui-btn-inline">T&eacute;rminos y condiciones</a>
+  </div>-->
+</div>
+<!-- End page -->
+<!--  -->
+<!--  -->
+
+<!--  -->
+<!--  -->
+<!-- Start page -->
+<div data-role="page" data-theme="f" id="pregunta_b5">
+  <div data-role="header" data-theme="g">
+    <h1 class="ui-header-g">
+    	<img src="img/cabecera2.jpg" alt="">
+    </h1>
+  </div>
+  <!--  -->
+  <!--  -->
+  <!-- Start pop up -->
+  <div data-role="popup" id="myPopupDialog6">
+    <div data-role="header" data-theme="f">
+      <h1 data-theme="f">T&Eacute;RMINOS Y CONDICIONES</h1>
+        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-delete ui-li-icon ui-btn-right" data-rel="back"><img src="img/close-icon-b.jpg" class="" alt="close"></a>
+    </div>
+
+      <div data-role="main" class="ui-content">
+        <p>  NEUTROGENA&reg; lanzar&aacute; una aplicaci&oacute;n en su fanpage denominada &quot;Quiz Neutrogena&quot;, &eacute;sta tendr&aacute; vigencia de 2 meses, iniciando el 06 de enero del 2014 y terminando el 06 de marzo del 2014. En esta aplicaci&oacute;n podr&aacute;n participar todas las fans de la p&aacute;gina de Facebook de NEUTROGENA&reg;.  </p>  <p>  La aplicaci&oacute;n ser&aacute; un apoyo para las usuarias, es una plataforma donde ellas responder&aacute;n un cuestionario y podr&aacute;n descubrir su rutina de belleza ideal seg&uacute;n su tipo de piel. Se le pedir&aacute; a la usuaria la siguiente informaci&oacute;n: Nombre y Apellido, correo electr&oacute;nico, DNI, edad y caracter&iacute;sticas relacionadas al tipo de piel.  </p>  <p>  Adem&aacute;s, se solicitar&aacute; los permiso necesarios que exige Facebook para poder acceder a esta aplicaci&oacute;n. Despu&eacute;s de realizado el cuestionario, la usuaria tendr&aacute; como resultado su rutina de belleza ideal con los productos Neutrogena. Adicionalmente, la usuaria participar&aacute; en un sorteo de un pack compuesto por 3 productos NEUTROGENA&reg; (este pack podr&aacute; variar de acuerdo a la rutina de belleza que le corresponda).  </p>  <p>  Para participar en la aplicaci&oacute;n, la usuaria deber&aacute; tener en cuenta las siguientes condiciones:  </p>  - Deber&aacute; hacerse fan de la p&aacute;gina de Facebook de NEUTROGENA&reg; haciendo clic en el bot&oacute;n de &quot;Me gusta&quot;.  <p>  - Deber&aacute; tener m&aacute;s de 18 a&ntilde;os de edad.  </p>  - Deber&aacute; estar debidamente registrada y con un perfil creado en Facebook que refleje su verdadera identidad.  <p>  - Deber&aacute; completar todos los datos solicitados (Nombre y Apellido, correo electr&oacute;nico, DNI y edad), as&iacute; como responder todas las preguntas del Quiz.  </p>  <p>  La ganadora del pack de productos se publicar&aacute; el d&iacute;a 04 de enero de 2014 en el fanpage de NEUTROGENA&reg;.  </p>
+      </div>
+  </div>
+  <!-- End pop up -->
+  <!--  -->
+  <!--  -->
+  <div data-role="content" data-theme="f">
+ 
+    <div>
+      <div class="ui-title-question">
+        5. &#191;C&oacute;mo son los poros de tu cara?
+      </div>
+      <div data-role="fieldcontain" class="ui-fieldcontent">
+          <fieldset data-role="">
+                <input type="radio" name="radio-choice-6" id="radio-choice-1" value="1" style="display:none"/>
+                <label for="radio-choice-1">a)  Poros invisibles.</label>
+
+                <input type="radio" name="radio-choice-6" id="radio-choice-2" value="2" style="display:none" />
+                <label for="radio-choice-2">b) Poros dilatados en la Zona T (frente, nariz y ment&oacute;n).</label>
+
+                <input type="radio" name="radio-choice-6" id="radio-choice-3" value="3" style="display:none" />
+                <label for="radio-choice-3">c) Poros dilatados en toda la cara.</label>
+                
+                <input type="radio" name="radio-choice-6" id="radio-choice-4" value="4" style="display:none" />
+                <label for="radio-choice-4">d) Poros dilatados con lesiones de granitos y espinillas.</label>
+          </fieldset>
+      </div>
+    </div>
+    <a href="#" data-role="button" data-inline="true" class="difference-button" Onclick="ctrOpciones('listo','radio-choice-6');">
+      CONTINUAR
+      <img src="img/arrow.png" alt="USA" class="ui-li-icon">
+    </a>
+  </div>
+
+ <!-- <div data-role="footer" data-theme="g">
+    <a href="#myPopupDialog6" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn ui-corner-all ui-btn-inline">T&eacute;rminos y condiciones</a>
+  </div>-->
+</div>
+<!-- End page -->
+<!--  -->
+<!--  -->
+    
+<!--  -->
+<!--  -->
+<!-- Start page -->
+<div data-role="page" data-theme="f" id="listo">
+  <div data-role="header" data-theme="g">
+    <h1 class="ui-header-g">
+    	<img src="img/cabecera2.jpg" alt="">
+    </h1>
+  </div>
+  <!--  -->
+  <!--  -->
+  <!-- Start pop up -->
+  <div data-role="popup" id="myPopupDialog5">
+    <div data-role="header" data-theme="f">
+      <h1 data-theme="f">T&Eacute;RMINOS Y CONDICIONES</h1>
+        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-delete ui-li-icon ui-btn-right" data-rel="back"><img src="img/close-icon-b.jpg" class="" alt="close"></a>
+    </div>
+
+      <div data-role="main" class="ui-content">
+        <p>  NEUTROGENA&reg; lanzar&aacute; una aplicaci&oacute;n en su fanpage denominada &quot;Quiz Neutrogena&quot;, &eacute;sta tendr&aacute; vigencia de 2 meses, iniciando el 06 de enero del 2014 y terminando el 06 de marzo del 2014. En esta aplicaci&oacute;n podr&aacute;n participar todas las fans de la p&aacute;gina de Facebook de NEUTROGENA&reg;.  </p>  <p>  La aplicaci&oacute;n ser&aacute; un apoyo para las usuarias, es una plataforma donde ellas responder&aacute;n un cuestionario y podr&aacute;n descubrir su rutina de belleza ideal seg&uacute;n su tipo de piel. Se le pedir&aacute; a la usuaria la siguiente informaci&oacute;n: Nombre y Apellido, correo electr&oacute;nico, DNI, edad y caracter&iacute;sticas relacionadas al tipo de piel.  </p>  <p>  Adem&aacute;s, se solicitar&aacute; los permiso necesarios que exige Facebook para poder acceder a esta aplicaci&oacute;n. Despu&eacute;s de realizado el cuestionario, la usuaria tendr&aacute; como resultado su rutina de belleza ideal con los productos Neutrogena. Adicionalmente, la usuaria participar&aacute; en un sorteo de un pack compuesto por 3 productos NEUTROGENA&reg; (este pack podr&aacute; variar de acuerdo a la rutina de belleza que le corresponda).  </p>  <p>  Para participar en la aplicaci&oacute;n, la usuaria deber&aacute; tener en cuenta las siguientes condiciones:  </p>  - Deber&aacute; hacerse fan de la p&aacute;gina de Facebook de NEUTROGENA&reg; haciendo clic en el bot&oacute;n de &quot;Me gusta&quot;.  <p>  - Deber&aacute; tener m&aacute;s de 18 a&ntilde;os de edad.  </p>  - Deber&aacute; estar debidamente registrada y con un perfil creado en Facebook que refleje su verdadera identidad.  <p>  - Deber&aacute; completar todos los datos solicitados (Nombre y Apellido, correo electr&oacute;nico, DNI y edad), as&iacute; como responder todas las preguntas del Quiz.  </p>  <p>  La ganadora del pack de productos se publicar&aacute; el d&iacute;a 04 de enero de 2014 en el fanpage de NEUTROGENA&reg;.  </p>
+      </div>
+  </div>
+  <!-- End pop up -->
+  <!--  -->
+  <!--  -->
+
+  <div data-role="content" data-theme="f">
+    <div class="content-form">
+      <div class="top-ready">
+        &iexcl;Listo!
+      </div>
+    </div>
+    <a href="#"  data-role="button" data-inline="true" onClick="insertRecordQuiz();">
+      VER TU RUTINA
+      <img src="img/arrow.png" alt="USA" class="ui-li-icon">
+    </a>
+  </div>
+ <!-- 
+  <div data-role="footer" data-theme="g" class="minus-top">
+    <a href="#myPopupDialog5" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn ui-corner-all ui-btn-inline">T&eacute;rminos y condiciones</a>
+  </div>-->
+</div>
+<!-- End page -->
+<!--  -->
+<!--  -->
+
+<script src="js/bootstrap.js"></script>
+<script src="js/model.js"></script>
+<script type="text/javascript">
+
+	iniciar_bd();
+</script>
+</body>
+</html>

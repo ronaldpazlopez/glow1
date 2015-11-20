@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+	<script src="../js/jquery-1.9.1.min.js"></script>
+	
+	<script src="../js/cordova.js"></script>
+	
+	
+	<script type="text/javascript" charset="utf-8">
+		var uuid_device = 0;
+
+		document.addEventListener("deviceready", onDeviceReady, false);
+
+		function onDeviceReady() {
+			uuid_device = device.uuid;
+		}
+		
+	</script>
+	
+	<style>
+		.results{margin:40px; width:950px; height:350px; overflow:hidden;}
+		#content_1{width:675px;height:320px;}
+		#content_2{width:820px;height:320px;}
+		
+		.grid{table-layout:fixed;border-collapse:separate;border-style:none;border-spacing:0;width:0;}
+		.grid th {overflow: hidden;white-space: nowrap;padding: 0;text-align: center;vertical-align: middle;width: 150px;max-width: 150px;font-size: 12px;border: 1px solid #cbcbcb;border-width: 0 1px 1px 0;background-color: #f3f3f3;color: #222;}
+		.grid td {overflow: hidden;white-space: nowrap;width: 150px;max-width: 150px;height: 20px;line-height: 20px;font-size: 13px;border: 1px solid #cbcbcb;border-width: 0 1px 1px 0;text-align: right;vertical-align: middle;padding: 1px 2px;background-color: #fff;color: #000;}
+		.grid th:first-child, .grid td:first-child {width: 40px;text-align: center;background-color: #f3f3f3;color: #222;padding-left: 4px;}
+	</style>
+</head>
+<body>
+	<link href="js/custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+	
+	<h2>Quiz Neutrogena - Administrador</h2>
+  
+	<a href="login.html" style="float:right;margin-top:-35px;margin-right: 20px" rel="external">Cerrar Sesi&oacute;n</a>
+	<div>Tabla - Usuarios registrados</div>
+	<div id="results" class="results">
+	<table class="grid">
+        <thead>
+            <tr>
+				<th class="span1">Id</th>
+				<th>Fecha</th>
+				<th>Nombre</th>
+				<th>Apellido</th>
+				<th>Email</th>
+				<th>Dni</th>
+            </tr>
+          </thead>
+		</table>
+		<div id="content_2">
+			<table id="grid2" class="grid">
+			<thead>
+			  <tr>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+			  </tr>
+			</thead>
+			<tbody>
+				
+			</tbody>
+			</table>
+		</div>
+	</div>
+	
+	<div>Tabla - Quiz neutrogena</div>
+	<div id="results_quiz" class="results">
+		<table class="grid">
+        <thead>
+            <tr>
+              <th >Id</th>
+		      <th >Fecha</td>
+              <th >ID Usuario</th>
+              <th >Respondio</th>
+		      <th >Respuesta</th>
+            </tr>
+          </thead>
+		</table>
+		<div id="content_1">
+			<table id="grid" class="grid">
+			<thead>
+			  <tr>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+			  </tr>
+			</thead>
+			<tbody>
+				
+			</tbody>
+			</table>
+		</div>
+	</div>
+
+
+	<!--
+	  <a href="#" onClick="ctrlSincronizar();">Sincronizar BD Online</a><br/>
+	  <a href="#" onClick="dropTable();">Borrar BD Online</a> 
+	-->
+		
+	<div class="form-actions">
+		<button type="button" class="btn btn-primary" onClick="ctrlSincronizar()">Sincronizar BD Online</button>
+<!--
+		<button type="button" class="btn btn-danger" onClick="dropTable()">Borrar BD Online</button>
+	-->	
+		
+	</div> 
+	
+
+	<script src="../js/bootstrap.js"></script>
+	<script src="../js/model.js"></script>
+	<script src="js/custom-scrollbar/jquery.mCustomScrollbar.js"></script>
+	<script type="text/javascript">
+		
+		iniciar_bd();
+		showRecords();
+		showRecords_Quiz();
+		
+		(function($){
+			$(window).load(function(){
+				
+				setTimeout(function(){
+					$("#content_1").mCustomScrollbar();
+					$("#content_2").mCustomScrollbar();
+				
+				},1000);
+			});
+		})(jQuery);
+	</script>
+  
+</body>
+</html>
